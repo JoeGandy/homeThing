@@ -32,13 +32,9 @@ void HomeThingMenuHeader::drawHeaderTitle(int yPosOffset,
                                           const MenuStates activeMenuState) {
   int xPos = 2;
   switch (activeMenuState) {
-    case rootMenu: {
-      auto screenName = (*active_menu_screen_)->get_name();
-      drawHeaderTitleWithString(screenName, xPos);
-      break;
-    }
+    case rootMenu:
     case settingsMenu:
-      drawHeaderTitleWithString("Settings", xPos);
+      drawHeaderTitleWithString("Remote", xPos);
       break;
     case appMenu:
       break;
